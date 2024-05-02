@@ -14,14 +14,18 @@
   </div>
 
   <div class="container">
- <img src="2.png" alt="output analysis" class="landing-image">
+ <img src="33.jpg" alt="output analysis" class="landing-image">
+    <p></p>
+     <img src="66.png" alt="output analysis" class="landing-image">
+    <p></p>
+     <img src="44.jpg" alt="output analysis" class="landing-image">
       </div>
     <div class="container">
    <a href="https://github.com/Debbatisudheer/closures/blob/master/main.py" target="_blank">Link to the main.py file on GitHub</a>
         </div>
   <div class="container">
   <h1>Lunar Descent Navigation</h1>
-  <div class="explanation">
+
     <h2>How Closures Work in This Context:</h2>
     <ul>
       <li><strong>Creation of the Closure:</strong> The function create_navigation_algorithm creates a closure named navigate. This closure contains the algorithm for adjusting the descent rate based on sensor data.</li>
@@ -30,9 +34,19 @@
       <li><strong>Retaining State:</strong> Each time navigate is called, it updates the sensor_data variable and calculates the descent rate based on the updated data. The closure "remembers" the previous state of sensor_data across multiple calls.</li>
       <li><strong>Autonomous Navigation:</strong> During the lunar descent loop, the closure is invoked repeatedly to get the descent rate. The algorithm adapts to changes in altitude and velocity, allowing the spacecraft to autonomously adjust its trajectory in real-time.</li>
       <li><strong>Continuation of State:</strong> Even though the navigate function is called multiple times within the loop, it retains access to the same sensor_data variable. This allows it to continue updating the descent rate based on the latest sensor readings.</li>
-    </ul>
-    <p>Source: <a href="https://www.example.com">Example Source</a></p>
+    </ul>  
   </div>
+    <div class="container">
+  <h1>Advantages of Using Closures in Lunar Descent Navigation</h1>
+  <div class="explanation">
+    <ul>
+      <li><strong>Encapsulation:</strong> Closures encapsulate the navigation algorithm within a self-contained function. This helps in organizing the code by keeping related logic together and hiding implementation details from the outer scope. Engineers can focus on the higher-level behavior of the navigation system without needing to understand the intricacies of the algorithm.</li>
+      <li><strong>Maintaining State:</strong> Closures retain access to the variables of their containing scope even after the outer function has finished executing. This allows the navigation algorithm to maintain and update the state of sensor data and other variables across multiple iterations of the descent loop. As a result, the spacecraft can continuously adapt its trajectory based on the latest information.</li>
+      <li><strong>Flexibility and Adaptability:</strong> By using closures, the navigation algorithm becomes highly adaptable to changes in sensor data and terrain conditions. Engineers can easily modify the algorithm to incorporate different strategies for adjusting the descent rate based on altitude, velocity, terrain analysis, or any other relevant factors. This flexibility is crucial for ensuring the spacecraft's ability to navigate autonomously and respond to dynamic environments.</li>
+      <li><strong>Autonomous Navigation:</strong> Closures enable the spacecraft to perform autonomous navigation during the descent phase. The closure containing the navigation algorithm operates independently within the descent loop, making real-time adjustments to the trajectory without external intervention. This autonomy is essential for ensuring the success of the lunar landing mission, especially in scenarios where communication with the ground station may be limited or lost.</li>
+    </ul>
+  </div>
+</div>
 
  <div class="container">
 
