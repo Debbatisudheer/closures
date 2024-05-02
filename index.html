@@ -23,6 +23,32 @@
     <div class="container">
    <a href="https://github.com/Debbatisudheer/closures/blob/master/main.py" target="_blank">Link to the main.py file on GitHub</a>
         </div>
+   <div class="container">
+    <ul>
+      <li><strong>Creation of the Closure:</strong> The function <code>create_navigation_algorithm</code> creates a closure named <code>navigate</code>. This closure contains the algorithm for adjusting the descent rate based on sensor data.</li>
+      <li><strong>Access to Outer Scope Variables:</strong> The <code>navigate</code> function has access to the <code>sensor_data</code> variable defined in the outer scope of <code>create_navigation_algorithm</code>. This is achieved using the <code>nonlocal</code> keyword.</li>
+      <li><strong>Encapsulation:</strong> The <code>navigate</code> function encapsulates the navigation logic. It can access and modify the <code>sensor_data</code> variable, but the details of how the navigation algorithm works are hidden within the closure.</li>
+      <li><strong>Retaining State:</strong> Each time <code>navigate</code> is called, it updates the <code>sensor_data</code> variable and calculates the descent rate based on the updated data. The closure "remembers" the previous state of <code>sensor_data</code> across multiple calls.</li>
+      <li><strong>Autonomous Navigation:</strong> During the lunar descent loop, the closure is invoked repeatedly to get the descent rate. The algorithm adapts to changes in altitude and velocity, allowing the spacecraft to autonomously adjust its trajectory in real-time.</li>
+      <li><strong>Continuation of State:</strong> Even though the <code>navigate</code> function is called multiple times within the loop, it retains access to the same <code>sensor_data</code> variable. This allows it to continue updating the descent rate based on the latest sensor readings.</li>
+    </ul>
+    <p>In summary, closures in this code facilitate the creation of a self-contained navigation algorithm that can adapt to changing conditions during the lunar descent, maintaining access to the latest sensor data and trajectory information.</p>
+  </div>
+  <div class="container">
+    <h1>Lunar Descent Visualization</h1>
+    <p>
+      Let's visualize the lunar descent process using closures:
+    </p>
+    <ol>
+      <li><strong>Starting lunar descent:</strong> The spacecraft begins its descent from a certain altitude with an initial descent rate.</li>
+      <li><strong>Closure execution:</strong> The closure representing the navigation algorithm is executed repeatedly, calculating the descent rate based on the current altitude and velocity. Each execution of the closure corresponds to a step in the descent process.</li>
+      <li><strong>Decreasing descent rate:</strong> With each execution of the closure, the descent rate gradually decreases as the spacecraft approaches the lunar surface. This decrease is determined by the algorithm defined within the closure.</li>
+      <li><strong>Closure termination:</strong> The closure continues executing until the descent rate reaches zero, indicating that the spacecraft has safely landed on the moon's surface. At this point, the closure terminates, and the landing is deemed successful.</li>
+    </ol>
+    <p>
+      In each step, the closure recalculates the descent rate based on the current altitude and velocity, gradually decreasing it until it reaches zero, indicating a successful landing.
+    </p>
+  </div>
   <div class="container">
   <h1>Lunar Descent Navigation</h1>
 
