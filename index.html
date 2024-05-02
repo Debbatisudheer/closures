@@ -19,6 +19,20 @@
     <div class="container">
    <a href="https://github.com/Debbatisudheer/closures/blob/master/main.py" target="_blank">Link to the main.py file on GitHub</a>
         </div>
+  <div class="container">
+  <h1>Lunar Descent Navigation</h1>
+  <div class="explanation">
+    <h2>How Closures Work in This Context:</h2>
+    <ul>
+      <li><strong>Creation of the Closure:</strong> The function create_navigation_algorithm creates a closure named navigate. This closure contains the algorithm for adjusting the descent rate based on sensor data.</li>
+      <li><strong>Access to Outer Scope Variables:</strong> The navigate function has access to the sensor_data variable defined in the outer scope of create_navigation_algorithm. This is achieved using the nonlocal keyword.</li>
+      <li><strong>Encapsulation:</strong> The navigate function encapsulates the navigation logic. It can access and modify the sensor_data variable, but the details of how the navigation algorithm works are hidden within the closure.</li>
+      <li><strong>Retaining State:</strong> Each time navigate is called, it updates the sensor_data variable and calculates the descent rate based on the updated data. The closure "remembers" the previous state of sensor_data across multiple calls.</li>
+      <li><strong>Autonomous Navigation:</strong> During the lunar descent loop, the closure is invoked repeatedly to get the descent rate. The algorithm adapts to changes in altitude and velocity, allowing the spacecraft to autonomously adjust its trajectory in real-time.</li>
+      <li><strong>Continuation of State:</strong> Even though the navigate function is called multiple times within the loop, it retains access to the same sensor_data variable. This allows it to continue updating the descent rate based on the latest sensor readings.</li>
+    </ul>
+    <p>Source: <a href="https://www.example.com">Example Source</a></p>
+  </div>
 
  <div class="container">
 
